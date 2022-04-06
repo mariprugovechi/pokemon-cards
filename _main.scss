@@ -1,0 +1,107 @@
+$colorOne: #DAA520;
+$colorTwo: #18377f;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+body {
+    background-color: #79C9FA;
+    background-image: url('./img/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    main {
+        min-height: 100vh;
+        header {
+            padding: 40px 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h1 {
+                color: $colorOne;
+                -webkit-text-stroke: 2px $colorTwo;
+                font-size: 35px;
+                text-transform: uppercase;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            #search {  
+                align-self: center;
+                display: flex;
+                align-items: center;         
+                input {
+                    height: 25px;
+                    border: solid 1px $colorOne;
+                    padding: 0 15px;
+                }
+                button {
+                    height: 27px;
+                    width: 35px;
+                    background-color: $colorOne;
+                    border: none;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                i {
+                    color: $colorTwo;
+                }
+            }
+        }
+        #pokemons_section {
+            display: flex;
+            flex-direction: row;
+            flex-flow: wrap;
+            justify-content: space-evenly;
+            padding: 0 50px;
+            .pokemon-card {
+                display: flex;
+                height: 275px;
+                width: 225px;
+                flex-direction: column;
+                background: rgb(34,193,195);
+                background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+                border: solid 5px $colorOne;
+                margin: 45px 15px;
+                border-radius: 3px;
+                transition: 500ms;
+                box-shadow: 0 0 0.5em rgb(79, 79, 79);
+                .pokemon-image {
+                    width: 225px;
+                    height: 180px;   
+                    display: flex;
+                    
+                    transition: 500ms;
+                    .pokemon-photo {
+                        height: fit-content;
+                        margin: auto;
+                    }
+                }
+                h2 {
+                    color: $colorOne;
+                    -webkit-text-stroke: 1px $colorTwo;
+                    font-size: 24px;
+                    text-align: center;
+                    margin: 8px 0;
+                }
+                p {
+                    font-size: 18px;
+                    text-align: center;
+                    color: $colorTwo;
+                    font-weight:500;
+                    margin-bottom: 25px;
+                }
+                &:hover {
+                    box-shadow: 0 0 1em rgb(79, 79, 79);
+                }
+            }
+        }
+    }
+}
